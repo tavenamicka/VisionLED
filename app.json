@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "VisionLED",
+    "slug": "visionled",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#1a1a2e",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tavenamicka.visionled",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Accès caméra pour analyser couleurs LED",
+        "NSMicrophoneUsageDescription": "Microphone pour annonces vocales"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a1a2e"
+      },
+      "package": "com.tavenamicka.visionled",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.VIBRATE"
+      ],
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "description": "Analyseur de couleurs LED pour daltoniens - Détection temps réel",
+    "primaryColor": "#e94560",
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Accès caméra pour analyser les LED"
+        }
+      ]
+    ]
+  }
+}
